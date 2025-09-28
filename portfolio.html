@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pragadheesh S | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/2b4f5b6b4f.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">Pragadheesh<span> S</span></h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Pragadheesh</span></h1>
+      <h3>Aspiring Engineer | Tech Enthusiast</h3>
+      <p>Motivated student with a strong foundation in programming and problem-solving. Passionate about building impactful solutions.</p>
+      <a href="#resume" class="btn">View Resume</a>
+    </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Profile">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a motivated college student with strong communication skills and a solid foundation in Microsoft Excel. I'm eager to gain hands-on experience and contribute to a team while developing my skills in a professional environment.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><i class="fas fa-code"></i> C Language</div>
+      <div class="skill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill"><i class="fas fa-database"></i> Data Science</div>
+      <div class="skill"><i class="fab fa-java"></i> Java</div>
+      <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <p>Download my latest resume below:</p>
+    <a href="Pragadheesh_Resume.pdf" class="btn" download>📄 Download Resume</a>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="edu-item">
+        <h3>2022</h3>
+        <p>Rajendran Matriculation Higher Secondary School, Erode, Tamil Nadu (10th)</p>
+      </div>
+      <div class="edu-item">
+        <h3>2024</h3>
+        <p>Rajendran Matriculation Higher Secondary School, Erode, Tamil Nadu (12th)</p>
+      </div>
+      <div class="edu-item">
+        <h3>2028</h3>
+        <p>St. Joseph's Institute of Technology, Chennai — B.E. Electrical and Electronics Engineering</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-phone"></i> 9597385979</p>
+      <p><i class="fas fa-envelope"></i> s.pragadheesh09.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> 8/15 Mahalakshmi Nagar, 2nd Cross Street, Adambakkam</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pragadheesh S | Portfolio</p>
+  </footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const options = { threshold: 0.2 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+        }
+      });
+    }, options);
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
